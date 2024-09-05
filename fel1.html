@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Szelektorok Feladat</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header>
+        <h1>Üdvözöllek a CSS Szelektorok Feladatban!</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Főoldal</a></li>
+                <li><a href="#">Rólunk</a></li>
+                <li><a href="#">Kapcsolat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Célkitűzés</h2>
+            <p>A következő feladatok segítenek gyakorolni a CSS szelektorok használatát különböző HTML elemekre.</p>
+        </section>
+
+        <section>
+            <h2>Űrlap</h2>
+            <form>
+                <label for="name">Név:</label>
+                <input type="text" id="name" name="name">
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                
+                <label for="message">Üzenet:</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <button type="submit">Küldés</button>
+            </form>
+        </section>
+
+        <section class="info">
+            <h2>Információk</h2>
+            <p class="highlight">Ezt a szöveget kiemeltük CSS segítségével.</p>
+            <p>Még több információ.</p>
+            <p class="highlight">Ez a második kiemelt szöveg.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 CSS Gyakorló Feladatok</p>
+    </footer>
+
+    <style>
+        h2 {
+            color: blue;
+        }
+        p {
+            font-size: 16px;
+        }
+        .info  {
+            border-color: #f0f0f0;
+        }
+        .hightlight {
+            font-weight: bold;
+        }
+        #name, #email {
+            width: 100%;
+        }
+        header h1, footer p {
+            text-align: center;
+        }
+        ul li {
+            margin: 10px;
+            list-style: none;
+        }
+        input[type="text"] ,input[type="email"] {
+            border: solid 1px #ccc
+        }
+        a::before {
+            content:"▲" ;
+        }
+        .highlight::first-letter {
+            font-size: 24px;
+            color: red;
+        }
+        .info::after {
+            content: '';
+            background-size: cover;
+            background-image: url(background.jpg);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 50%;
+            z-index: -1;
+        }
+        input:focus {
+            
+        }
+    </style>
+</body>
+</html>
